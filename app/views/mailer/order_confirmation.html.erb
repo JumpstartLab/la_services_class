@@ -1,14 +1,14 @@
-Dear <%= @user.full_name.titleize %>,
+Dear <%= @name.titleize %>,
 <br>
 <br>
 Thanks so much for your purchase of:
 <br>
-<% @order.order_items.each do |order_item| %>
-<%= order_item.quantity %>x <%= order_item.title %>
+<% @items.each do |item| %>
+<%= item["quantity"] %>x <%= item["title"] %>
 <br>
 <% end %>
 <br>
-We've processed your payment for <%= number_to_currency(@order.total) %>.
+We've processed your payment for <%= number_to_currency(@total) %>.
 <br>
 <br>
 We hope you stop by again!
